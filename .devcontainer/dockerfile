@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/devcontainers/python:3.10
+
+RUN apt-get update && apt-get install -y \
+    unzip \
+    wget \
+    xvfb \
+    chromium \
+    chromium-driver
+
+ENV PATH="/usr/lib/chromium-browser/:$PATH"
